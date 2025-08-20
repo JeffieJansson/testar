@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Min moderna hemsida</title>
+    <meta
+      name="description"
+      content="En modern, responsiv grund för en hemsida med HTML, CSS och JavaScript."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✨</text></svg>"
+    />
+
+    <!-- Extern CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a class="sr-only ring" href="#main">Hoppa till innehåll</a>
+
+    <!-- Header -->
+    <header class="site-header hide-when-scrolled" id="top">
+      <div class="container nav">
+        <div class="logo" aria-label="Logotyp">
+          <span class="logo-dot" aria-hidden="true"></span>
+          <span>Mitt Varumärke</span>
+        </div>
+
+        <nav aria-label="Huvudmeny">
+          <button
+            class="btn ghost menu-toggle ring"
+            aria-controls="mainmenu"
+            aria-expanded="false"
+          >
+            Meny
+          </button>
+          <ul id="mainmenu" role="list">
+            <li><a class="ring" href="#features">Funktioner</a></li>
+            <li><a class="ring" href="#om">Om</a></li>
+            <li><a class="ring" href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="btn ghost ring"
+            id="themeToggle"
+            aria-pressed="false"
+            title="Växla tema"
+          >
+            🌓
+          </button>
+          <a class="btn ring" href="#kontakt">Kom igång</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main id="main" class="hero">
+      <div class="container hero-card">
+        <div class="hero-inner">
+          <div>
+            <span class="badge">Nyhet</span>
+            <h1>En modern grund för din hemsida</h1>
+            <p>
+              Starta snabbt med ett responsivt, tillgängligt och snyggt
+              grundtema. Anpassa färger, layout och komponenter efter behov.
+            </p>
+            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap">
+              <a class="btn ring" href="#features">Se funktioner</a>
+              <a class="btn ghost ring" href="#om">Läs mer</a>
+            </div>
+          </div>
+          <div class="hero-visual">Din bild / illustration här</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Features -->
+    <section id="features">
+      <div class="container">
+        <div class="section-head">
+          <h2>Byggstenar</h2>
+          <p class="badge" aria-hidden="true">HTML • CSS • JS</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Responsivt</h3>
+            <p>
+              Grid- och container-utilities för mobil till desktop. Inga externa
+              ramverk behövs.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Tillgängligt</h3>
+            <p>
+              Fokusringar, hoppa-till-innehåll och semantiska element inbyggt
+              från start.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Teman</h3>
+            <p>
+              Dark/Light-mode via CSS-variabler och localStorage, enkelt att
+              anpassa.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Komponenter</h3>
+            <p>Knappar, badges och kort – lätta att återanvända.</p>
+          </article>
+          <article class="card">
+            <h3>Prestanda</h3>
+            <p>
+              Minimal JS, inga typsnittsladdningar, smarta skuggor och border
+              för djup.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Skalbar</h3>
+            <p>
+              Design tokens och utilities gör att du kan växa utan att tappa
+              konsistens.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container inner">
+        <strong id="cta-title">Redo att lansera?</strong>
+        <div style="display: flex; gap: 0.6rem; flex-wrap: wrap">
+          <a class="btn ring" href="#kontakt">Boka demo</a>
+          <a class="btn ghost ring" href="#om">Utforska mer</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Om -->
+    <section id="om">
+      <div
+        class="container grid"
+        style="grid-template-columns: 1.2fr 1fr; align-items: center"
+      >
+        <div>
+          <h2>Om projektet</h2>
+          <p class="muted">
+            Detta är ett startkit du kan bygga vidare på. Byt färger genom att
+            justera CSS-variabler i :root eller via data-theme-attribut.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Snabbstart</h3>
+          <ol>
+            <li>Ladda ned denna sida som <em>index.html</em>.</li>
+            <li>Byt logotyp, länkar och texter.</li>
+            <li>Lägg till dina egna sektioner och komponenter.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <form
+          class="card grid"
+          style="grid-template-columns: 1fr 1fr; gap: 0.75rem"
+        >
+          <label>
+            <span class="sr-only">Namn</span>
+            <input
+              class="ring"
+              type="text"
+              name="name"
+              placeholder="Ditt namn"
+              required
+              style="
+                width: 100%;
+                padding: 0.8rem;
+                border-radius: 12px;
+                border: 1px solid var(--border);
+                background: var(--elev);
+                color: var(--text);
+              "
+            />
+          </label>
+          <label>
+            <span class="sr-only">E-post</span>
+            <input
+              class="ring"
+              type="email"
+              name="email"
+              placeholder="Din e‑post"
+              required
+              style="
+                width: 100%;
+                padding: 0.8rem;
+                border-radius: 12px;
+                border: 1px solid var(--border);
+                background: var(--elev);
+                color: var(--text);
+              "
+            />
+          </label>
+          <label style="grid-column: 1 / -1">
+            <span class="sr-only">Meddelande</span>
+            <textarea
+              class="ring"
+              name="message"
+              rows="5"
+              placeholder="Skriv ditt meddelande..."
+              style="
+                width: 100%;
+                padding: 0.8rem;
+                border-radius: 12px;
+                border: 1px solid var(--border);
+                background: var(--elev);
+                color: var(--text);
+              "
+            ></textarea>
+          </label>
+          <div
+            style="
+              grid-column: 1 / -1;
+              display: flex;
+              gap: 0.5rem;
+              justify-content: flex-end;
+            "
+          >
+            <button type="reset" class="btn ghost ring">Rensa</button>
+            <button type="submit" class="btn ring">Skicka</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          gap: 1rem;
+          flex-wrap: wrap;
+        "
+      >
+        <small>© <span id="year"></span> Mitt Varumärke</small>
+        <a href="#top" class="ring">Till toppen ↑</a>
+      </div>
+    </footer>
+
+    <!-- Extern JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
