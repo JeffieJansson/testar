@@ -1,0 +1,35 @@
+// Hantera år i footern
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Hantera meny-knappen
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.getElementById("mainmenu");
+
+menuToggle.addEventListener("click", () => {
+  const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+  menuToggle.setAttribute("aria-expanded", !expanded);
+  menu.classList.toggle("open");
+});
+
+// Hantera tema-växling
+const themeToggle = document.getElementById("themeToggle");
+const root = document.documentElement;
+
+// Kolla sparat tema
+if (localStorage.getItem("theme") === "dark") {
+  root.setAttribute("data-theme", "dark");
+  themeToggle.setAttribute("aria-pressed", "true");
+}
+
+themeToggle.addEventListener("click", () => {
+  const isDark = root.getAttribute("data-theme") === "dark";
+  if (isDark) {
+    root.removeAttribute("data-theme");
+    themeToggle.setAttribute("aria-pressed", "false");
+    localStorage.setItem("theme", "light");
+  } else {
+    root.setAttribute("data-theme", "dark");
+    themeToggle.setAttribute("aria-pressed", "true");
+    localStorage.setItem("theme", "dark");
+  }
+});
