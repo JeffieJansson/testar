@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Min moderna hemsida</title>
+    <title>Min test hemsida</title>
     <meta
       name="description"
       content="En modern, responsiv grund för en hemsida med HTML, CSS och JavaScript."
@@ -43,6 +43,7 @@
           </ul>
         </nav>
 
+        <!-- Lägg till språkknapp i header, bredvid themeToggle -->
         <div class="nav-actions">
           <button
             class="btn ghost ring"
@@ -52,7 +53,16 @@
           >
             🌓
           </button>
-          <a class="btn ring" href="#kontakt">Kom igång</a>
+          <button
+            class="btn ghost ring"
+            id="langToggle"
+            aria-pressed="false"
+            title="Byt språk"
+          >
+            SV/EN
+          </button>
+          <!-- NY -->
+          <a class="btn ring" href="#kontakt">Kom igång idag</a>
         </div>
       </div>
     </header>
@@ -104,7 +114,7 @@
             <h3>Teman</h3>
             <p>
               Dark/Light-mode via CSS-variabler och localStorage, enkelt att
-              anpassa.
+              anpassa!
             </p>
           </article>
           <article class="card">
