@@ -119,3 +119,19 @@ footer { border-top:1px solid var(--border); padding:2rem 0; color: var(--muted)
 .ring:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 12px; }
 .hide-when-scrolled { transition: transform .2s ease; }
 .hide-when-scrolled.is-hidden { transform: translateY(-100%); }
+
+/* ------------------------------ Språkknapp ------------------------------ */
+#langToggle {
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+#langToggle:hover {
+  background: var(--brand);
+  color: #fff;
+}
+
